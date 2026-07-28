@@ -618,9 +618,9 @@ Sample variant structure:
   - **Label** · `TEXT` · 27×12 · “Label”
   - **Trailing Icon** · `INSTANCE` · 16×16 · instance of Trailing Icon
 
-### Switch
+### Toggle
 
-Page: Switch · 8 variants
+Page: Toggle · 8 variants
 
 Reuse: import existing — key `ad1af721276bed6655492c724935cde8e6f09074` · node `1729:82`
 

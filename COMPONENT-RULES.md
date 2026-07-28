@@ -39,7 +39,7 @@ Status: confirmed for stroke + active fill (dictated by Shashwat in session, app
 
 ## Toggle
 
-- Built on its own "Switch" Figma page as a `Toggle` component set (node 1729:82). Variant axes: Size (Medium 52×32 default, Small 44×24) x Value (Off, On) x State (Default, ReadOnly) — 8 variants.
+- Built on its own Toggle Figma page as a `Toggle` component set (node 1729:82). Variant axes: Size (Medium 52×32 default, Small 44×24) x Value (Off, On) x State (Default, ReadOnly) — 8 variants.
 - Track fill: `border/default` (Off), `surface/brand` (On). Thumb: `surface/white`, subtle drop shadow. No stroke/boundary on the track — relies on fill contrast alone against the page.
 - ReadOnly uses the DS-wide muted-state convention (DESIGN.md §8: 40% opacity, no pointer events) — the same treatment as every other atom's non-interactive state, not a separate Disabled state.
 - Touch target: 48×48 minimum via transparent padding around the track; the track itself is never stretched to hit the target.
