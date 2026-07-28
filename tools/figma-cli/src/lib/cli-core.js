@@ -874,18 +874,19 @@ function varLoadingCode() {
   return `
 const collections = await figma.variables.getLocalVariableCollectionsAsync();
 const vars = {};
-// Load variables from shadcn collections (shadcn/semantic and shadcn/primitives)
+// Load variables from every local collection (any imported design system, not just shadcn)
 for (const col of collections) {
-  if (col.name.startsWith('shadcn')) {
-    for (const id of col.variableIds) {
-      const v = await figma.variables.getVariableByIdAsync(id);
-      if (v) vars[v.name] = v;
-    }
+  for (const id of col.variableIds) {
+    const v = await figma.variables.getVariableByIdAsync(id);
+    if (v) vars[v.name] = v;
   }
 }
-const boundFill = (variable) => figma.variables.setBoundVariableForPaint(
-  { type: 'SOLID', color: { r: 0.5, g: 0.5, b: 0.5 } }, 'color', variable
-);
+const boundFill = (variable) => {
+  if (!variable) throw new Error('Variable not found in any local collection');
+  return figma.variables.setBoundVariableForPaint(
+    { type: 'SOLID', color: { r: 0.5, g: 0.5, b: 0.5 } }, 'color', variable
+  );
+};
 `;
 }
 

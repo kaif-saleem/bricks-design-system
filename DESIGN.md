@@ -618,6 +618,24 @@ Sample variant structure:
   - **Label** · `TEXT` · 27×12 · “Label”
   - **Trailing Icon** · `INSTANCE` · 16×16 · instance of Trailing Icon
 
+### Switch
+
+Page: Switch · 8 variants
+
+Reuse: import existing — key `ad1af721276bed6655492c724935cde8e6f09074` · node `1729:82`
+
+| Property | Values |
+|---|---|
+| Size | Medium, Small |
+| Value | Off, On |
+| State | Default, ReadOnly |
+
+Sample variant structure:
+
+- **Size=Medium, Value=Off, State=Default** · `COMPONENT` · 52×48 · 1 children
+  - **Track** · `FRAME` · 52×32 · 1 children
+    - **Thumb** · `ELLIPSE` · 24×24
+
 ## 8. States
 
 State tokens should be derived from the base palette above. Recommended mappings:
