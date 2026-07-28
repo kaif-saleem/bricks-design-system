@@ -18,7 +18,7 @@ Status values: `production` (built, documented, safe to reuse or extend), `do-no
 | Checkbox | planned | none | none | 0 | none |
 | RadioButton | planned | none | none | 0 | none (test build was deleted from Figma by Shashwat 2026-07-16) |
 | InputField | do-not-use | Input fields | none (single component, Default only) | 1 | none (Mobile build 2026-07-16, node 1461:2191, 328w for 360px frames, Mobile/* text styles, fully bound, pipeline-audited; prior builds deleted by Shashwat; awaiting review) |
-| Toggle | planned | none | none | 0 | none |
+| Toggle | do-not-use | Switch | Size x Value x State | 8 | COMPONENT-RULES.md § Toggle; DESIGN.md § Switch; Documentation frame on the Switch page (test build, node 1729:82, fully auto-layout + token-bound; awaiting Shashwat's review) |
 | Dropdown | planned | none | none | 0 | none |
 | Toast | planned | none | none | 0 | none |
 | Chip | planned | none | none | 0 | none |
