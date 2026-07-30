@@ -21,6 +21,17 @@ Status: confirmed | unconfirmed
 
 Status: unconfirmed test build (node 1459:2134); every choice above pending Shashwat's review
 
+## OTPField
+
+- Anatomy: single rounded container (244×60, `radius/m`) showing 4 digits with wide letter-spacing — not four separate per-digit boxes. Padding `spacing/s` (vertical) / `spacing/l` (horizontal), gap between characters `spacing/4xl`.
+- Colors bound to the real published Bricks library (`color_Usage` collection), not this file's local token collections: container fill `background/neutral/primary`, border `stroke/primary` (Empty) / `stroke/grey1` (Filled), text `others/tag_1` (Empty placeholder) / `text/grey/grey1` (Filled digit).
+- Two states exist: Empty (placeholder dashes) and Filled (digits). Empty/Filled currently differ in both border token and digit font size (32 vs 22) — unconfirmed whether intentional.
+- Originally 5 instances of the shared `Input Fields` library component (3 of them exact duplicates, since removed). That master component is read-only from this file (published library), so it was detached to allow padding/gap/radius token binding — no live link back to the library component anymore.
+- Not a reusable component yet: static frames, no variant/component-set structure, no Focus/Error/Disabled states.
+- Uses one letter-spaced box rather than the more common per-digit-cell OTP pattern (Material, iOS, most banking apps) — no visual indication of current cursor position. Flagged as a design choice worth a deliberate call.
+
+Status: unconfirmed test build (node 2242:879); tokens mapped and documented, pending Shashwat's review of the anatomy/state choices above
+
 ## Checkbox
 
 - Stroke uses the primary stroke color token (`border/default`).

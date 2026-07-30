@@ -18,6 +18,7 @@ Status values: `production` (built, documented, safe to reuse or extend), `do-no
 | Checkbox | planned | none | none | 0 | none |
 | RadioButton | planned | none | none | 0 | none (test build was deleted from Figma by Shashwat 2026-07-16) |
 | InputField | do-not-use | Input fields | none (single component, Default only) | 1 | none (Mobile build 2026-07-16, node 1461:2191, 328w for 360px frames, Mobile/* text styles, fully bound, pipeline-audited; prior builds deleted by Shashwat; awaiting review) |
+| OTPField | do-not-use | OTP field | none (raw frames, no component set) | 0 | COMPONENT-RULES.md § OTPField; Documentation frame on the OTP field page (test build, node 2242:879; detached from the shared Input Fields library component to allow token binding — no live library link; awaiting Shashwat's review) |
 | Toggle | planned | none | none | 0 | none |
 | Dropdown | planned | none | none | 0 | none |
 | Toast | planned | none | none | 0 | none |
