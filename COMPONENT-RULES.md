@@ -39,12 +39,14 @@ Status: confirmed for stroke + active fill (dictated by Shashwat in session, app
 
 ## Toggle
 
-- Built on its own Toggle Figma page as a `Toggle` component set (node 1729:82). Variant axes: Size (Medium 52×32 default, Small 44×24) x Value (Off, On) x State (Default, ReadOnly) — 8 variants.
-- Track fill: `border/default` (Off), `surface/brand` (On). Thumb: `surface/white`, subtle drop shadow. No stroke/boundary on the track — relies on fill contrast alone against the page.
-- ReadOnly uses the DS-wide muted-state convention (DESIGN.md §8: 40% opacity, no pointer events) — the same treatment as every other atom's non-interactive state, not a separate Disabled state.
-- Touch target: 48×48 minimum via transparent padding around the track; the track itself is never stretched to hit the target.
-- Off/On distinguished by thumb position, never by color alone. Off↔On plays a 150ms Smart-Animate transition (thumb slide + track fill), wired only on Default-state variants — ReadOnly has no click reaction.
-- No built-in label or icon slot — every instance requires an external visible label for `aria-labelledby`.
-- Known gap: no Focus-visible variant built yet (WCAG 2.4.7) — add one before this ships to keyboard users.
+- Built on its own Toggle Figma page as a `Toggle` component set (node 1729:82). Variant axes: Size (Medium, Small) x Value (Off, On) x State (Default, ReadOnly). 3 dimensions, 8 variants, all built.
+- Anatomy: Container (Auto Layout, horizontal, centers its one child, fixed width matching the track, fixed height 48) holds Track (Auto Layout, horizontal, fixed 52x32 Medium or 44x24 Small, padding `spacing/2xs` all sides, radius `radius/l`) holds Thumb (Ellipse, fixed 24x24 Medium or 18x18 Small).
+- Track fill: `border/default` (Off), `surface/brand` (On). Thumb: `surface/white`, subtle drop shadow. No stroke on the track.
+- ReadOnly uses the DS-wide muted-state convention (DESIGN.md §8: 40% opacity, no pointer events). This is the same treatment as every other atom's non-interactive state, not a separate Disabled state.
+- Container height is fixed at 48px, matching the common 48px minimum tap target. Container width equals the track width (52px Medium, 44px Small), so this is not a full 48x48 touch target on the horizontal axis. Flagged as a known gap, not corrected yet.
+- Off and On are shown by thumb position, not by track color alone. Clicking a Default-state variant plays a 150ms Smart Animate transition: the thumb slides to the opposite edge and the track fill swaps at the same time. ReadOnly variants have no click reaction.
+- No built-in label or icon slot. Every instance needs an external visible label for `aria-labelledby`.
+- Known gap: no Focus-visible variant is built (WCAG 2.4.7). Needed before this ships to keyboard users.
+- Full documentation, including Overview, Purpose, When to use, When not to use, Properties, Variants, Behaviors, Accessibility, Specs, and Do's and Don'ts, lives in the Documentation frame on the Toggle page, following the structure in `templates/documentation-template.md` (RULEBOOK §13).
 
 Status: unconfirmed test build (node 1729:82); pending Shashwat's review
