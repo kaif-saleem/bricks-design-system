@@ -23,7 +23,7 @@ Status values: `production` (built, documented, safe to reuse or extend), `do-no
 | Toast | planned | none | none | 0 | none |
 | Chip | planned | none | none | 0 | none |
 | BottomSheet | planned | none | none | 0 | none |
-| Accordion | planned | none | none | 0 | none |
+| Accordion | do-not-use | Accordion | Device x Expansion x State | 16 | none (node 2436:489, Web+Mobile, fully token-bound and pipeline-audited per Rulebook §11; chevron icon is a placeholder Lucide vector pending the real Iconography instance swap, see Component-Rules; awaiting review) |
 | Tooltip | planned | none | none | 0 | none |
 
 Do-not-use components must not be extended, copied, or used as a reference pattern until the designer moves them to production.
