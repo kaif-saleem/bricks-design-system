@@ -533,6 +533,21 @@ Sample variant structure:
   - **Button** · `TEXT` · 46×16 · “Button”
   - **trailing-icon** · `INSTANCE` · 16×16 · instance of trailing-icon
 
+### OTPField
+
+Page:       ↳ OTP field · 3 variants
+
+Reuse: import existing — key `b8c0ee9c005163e8bcfe42a57e1d99c7a5720aaa` · node `2243:1229`
+
+| Property | Values |
+|---|---|
+| State | Default, Filled, Error |
+
+Sample variant structure:
+
+- **State=Default** · `COMPONENT` · 244×60 · horizontal row, gap 48px, padding 12/20/12/20px · 4 children
+  - **-** · `TEXT` · 16×38 · “-” · ×4
+
 ### .modal_non-dismissible
 
 Page:       ↳ Modal · 8 variants

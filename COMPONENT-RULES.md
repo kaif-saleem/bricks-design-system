@@ -23,14 +23,17 @@ Status: unconfirmed test build (node 1459:2134); every choice above pending Shas
 
 ## OTPField
 
-- Anatomy: single rounded container (244×60, `radius/m`) showing 4 digits with wide letter-spacing — not four separate per-digit boxes. Padding `spacing/s` (vertical) / `spacing/l` (horizontal), gap between characters `spacing/4xl`.
-- Colors bound to the real published Bricks library (`color_Usage` collection), not this file's local token collections: container fill `background/neutral/primary`, border `stroke/primary` (Empty) / `stroke/grey1` (Filled), text `others/tag_1` (Empty placeholder) / `text/grey/grey1` (Filled digit).
-- Two states exist: Empty (placeholder dashes) and Filled (digits). Empty/Filled currently differ in both border token and digit font size (32 vs 22) — unconfirmed whether intentional.
-- Originally 5 instances of the shared `Input Fields` library component (3 of them exact duplicates, since removed). That master component is read-only from this file (published library), so it was detached to allow padding/gap/radius token binding — no live link back to the library component anymore.
-- Not a reusable component yet: static frames, no variant/component-set structure, no Focus/Error/Disabled states.
-- Uses one letter-spaced box rather than the more common per-digit-cell OTP pattern (Material, iOS, most banking apps) — no visual indication of current cursor position. Flagged as a design choice worth a deliberate call.
+- Built on its own OTP field Figma page as an `OTPField` component set (node 2243:1229). Variant axis: State (Default, Filled, Error). 1 dimension, 3 variants, all built.
+- Anatomy: single rounded Container (Auto Layout, horizontal, fixed 244x60, padding `spacing/l` horizontal and `spacing/s` vertical, gap `spacing/4xl` between characters, radius `radius/m`, 1px border) holding 4 Character text nodes directly. No separate per-digit boxes.
+- Default and Filled pull fill, border, and text colors from the published Bricks library (`color_Usage`, a remote collection outside this file's 5 local collections): container fill `background/neutral/primary`, border `stroke/primary` (Default) or `stroke/grey1` (Filled), text `others/tag_1` at 32px (Default placeholder) or `text/grey/grey1` at 22px (Filled digit).
+- Error pulls border and text from this file's own local `color_tokens` instead: border `semantic_border/danger`, text `semantic_text/danger` at 22px. This is a mixed source, not a single one. Confirm with the designer which source Error should use once the published library has a matching error token.
+- Originally 5 instances of the shared `Input Fields` library component (3 of them exact duplicates, since removed). That master component is read-only from this file (published library), so it was detached to allow padding, gap, and radius token binding. No live link back to the library component remains.
+- Uses one letter-spaced text box rather than the more common per-digit-cell OTP pattern seen in Material, iOS, and most banking apps. No visual indication of current cursor position. A deliberate design choice worth confirming, not a bug.
+- No focus state, no per-character caret, and no auto-advance between characters is built. This is a static display of three states, not yet a working input.
+- Known gap: digit text has no shared text style bound (`textStyleId` is empty on every character), only a raw font size. Needs a real text style before this ships.
+- Full documentation, including Overview, Purpose, When to use, When not to use, Properties, Variants, Behaviors, Accessibility, Specs, and Do's and Don'ts, lives in the Documentation frame on the OTP field page, following the structure in `templates/documentation-template.md` (RULEBOOK §13).
 
-Status: unconfirmed test build (node 2242:879); tokens mapped and documented, pending Shashwat's review of the anatomy/state choices above
+Status: unconfirmed test build (node 2243:1229); pending Shashwat's review of the anatomy, state, and mixed token source choices above
 
 ## Checkbox
 
