@@ -18,6 +18,7 @@ Status values: `production` (built, documented, safe to reuse or extend), `do-no
 | Checkbox | planned | none | none | 0 | none |
 | RadioButton | planned | none | none | 0 | none (test build was deleted from Figma by Shashwat 2026-07-16) |
 | InputField | do-not-use | Input fields | none (single component, Default only) | 1 | none (Mobile build 2026-07-16, node 1461:2191, 328w for 360px frames, Mobile/* text styles, fully bound, pipeline-audited; prior builds deleted by Shashwat; awaiting review) |
+| IconButton | do-not-use | Icon Button | Variant x Size x State | 18 | COMPONENT-RULES.md § IconButton; DESIGN.md § IconButton; Documentation frame on the Icon Button page (test build, node 2415:2338, fully auto-layout + token-bound after the spacing/radius collection-collision fix, icon instance-swapped from the Iconography library; touch target and named instance-swap property are known gaps; awaiting Shashwat's review) |
 | Toggle | planned | none | none | 0 | none |
 | Dropdown | planned | none | none | 0 | none |
 | Toast | planned | none | none | 0 | none |

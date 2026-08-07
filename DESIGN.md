@@ -533,6 +533,23 @@ Sample variant structure:
   - **Button** · `TEXT` · 46×16 · “Button”
   - **trailing-icon** · `INSTANCE` · 16×16 · instance of trailing-icon
 
+### IconButton
+
+Page:       ↳ Icon Button · 18 variants
+
+Reuse: import existing — key `7a5e861c267757507c4c8d5f7c3682c6fcd09abd` · node `2415:2338`
+
+| Property | Values |
+|---|---|
+| Variant | Primary, Secondary, Tertiary |
+| Size | S, M, L |
+| State | Default, Disabled |
+
+Sample variant structure:
+
+- **Variant=Primary, Size=S, State=Default** · `COMPONENT` · 32×32 · horizontal row, padding 8px · 1 children
+  - **Icon** · `INSTANCE` · 16×16 · instance of Icon
+
 ### .modal_non-dismissible
 
 Page:       ↳ Modal · 8 variants
