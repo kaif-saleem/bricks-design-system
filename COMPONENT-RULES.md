@@ -31,9 +31,9 @@ Status: unconfirmed test build (node 1459:2134); every choice above pending Shas
 - Uses one letter-spaced text box rather than the more common per-digit-cell OTP pattern seen in Material, iOS, and most banking apps. No visual indication of current cursor position. A deliberate design choice worth confirming, not a bug.
 - No focus state, no per-character caret, and no auto-advance between characters is built. This is a static display of three states, not yet a working input.
 - Known gap: digit text has no shared text style bound (`textStyleId` is empty on every character), only a raw font size. Needs a real text style before this ships.
-- Full documentation, including Overview, Purpose, When to use, When not to use, Properties, Variants, Behaviors, Accessibility, Specs, and Do's and Don'ts, lives in the Documentation frame on the OTP field page, following the structure in `templates/documentation-template.md` (RULEBOOK §13).
+- Documentation format: the Documentation frame on the OTP field page now matches production Button's actual documentation style (title in purple/700 bold, section header plus grey subtitle, light-grey-header data tables, divider rules between sections, closing checkmark/cross usage examples), not the plain `templates/documentation-template.md` prose structure used in the first build. Button's and Tag's documentation predate `RULEBOOK.md` and this template (confirmed via git history: all four landed in the same initial commit), so Button's format is the real shipped precedent, not one authored under the current rulebook. This is the same inconsistency already flagged on the Accordion build: either the older production docs should migrate to the §13 template, or the template should be revised to match the older table-heavy style, so future components do not have to choose one arbitrarily.
 
-Status: unconfirmed test build (node 2243:1229); pending Shashwat's review of the anatomy, state, and mixed token source choices above
+Status: unconfirmed test build (node 2243:1229); pending Shashwat's review of the anatomy, state, mixed token source, and documentation-format choices above
 
 ## Checkbox
 
