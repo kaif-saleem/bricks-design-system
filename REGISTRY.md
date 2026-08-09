@@ -23,7 +23,7 @@ Status values: `production` (built, documented, safe to reuse or extend), `do-no
 | Toast | planned | none | none | 0 | none |
 | Chip | planned | none | none | 0 | none |
 | BottomSheet | planned | none | none | 0 | none |
-| Accordion | do-not-use | Accordion | Device x Expansion | 4 | none (node 2436:4225, Web+Mobile, no container fill, optional leading icon + always-visible chevron via Show Icon and Show Divider booleans, fully token-bound and pipeline-audited per Rulebook §11; icons are real Iconography (Bricks) instances (CaretDown/CaretUp/Files), no longer placeholders; awaiting review) |
+| Accordion | do-not-use | Accordion | Device x Expansion | 4 | none (node 2436:4225, Web+Mobile, no container fill, divider always shown on every variant, optional leading icon + always-visible chevron via a single Show Icon boolean (Show Divider removed per the designer's final property list), fully token-bound and pipeline-audited per Rulebook §11; icons are real Iconography (Bricks) instances (CaretDown/CaretUp/Files), no longer placeholders; awaiting review) |
 | Tooltip | planned | none | none | 0 | none |
 
 Do-not-use components must not be extended, copied, or used as a reference pattern until the designer moves them to production.
